@@ -1,0 +1,150 @@
+```html id="k4m9pz"
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pedido Especial 😂</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    font-family:Arial, sans-serif;
+    text-align:center;
+
+    background-image:url('https://media.istockphoto.com/id/1133825734/pt/vetorial/homeless-emoticon.jpg?s=170667a&w=0&k=20&c=3X3xo32bswxRv1GWH9N_mN5Fm3SZVUNIvMo6aRWFOzc=');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+h1{
+    color:white;
+    font-size:42px;
+    width:80%;
+    text-shadow:3px 3px 10px black;
+    margin-bottom:60px;
+}
+
+.botoes{
+    position:relative;
+    width:600px;
+    height:250px;
+}
+
+button{
+    position:absolute;
+    padding:18px 40px;
+    border:none;
+    border-radius:12px;
+    font-size:24px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.2s;
+}
+
+#sim{
+    background:#28a745;
+    color:white;
+    left:140px;
+    top:80px;
+}
+
+#nao{
+    background:#dc3545;
+    color:white;
+    left:340px;
+    top:80px;
+}
+
+#agradecimento{
+    display:none;
+    flex-direction:column;
+    align-items:center;
+}
+
+#agradecimento img{
+    width:350px;
+    border-radius:20px;
+    box-shadow:0 0 20px black;
+}
+
+#agradecimento h2{
+    color:white;
+    margin-top:25px;
+    font-size:42px;
+    text-shadow:3px 3px 10px black;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="inicio">
+
+<h1>
+Super, poderia contribuir com uma esmola?
+Talvez um aumento 😂
+</h1>
+
+<div class="botoes">
+
+<button id="sim">SIM</button>
+
+<button id="nao">NÃO</button>
+
+</div>
+
+</div>
+
+<div id="agradecimento">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQocWxCs5RgC0t-8ny3tJLgkWbRIthmiadGPA&s">
+
+<h2>Obrigado pelo reconhecimento 😂💸</h2>
+
+</div>
+
+<script>
+
+const botaoNao = document.getElementById("nao");
+
+botaoNao.addEventListener("mouseover", () => {
+
+    const largura = window.innerWidth - 150;
+    const altura = window.innerHeight - 150;
+
+    const x = Math.random() * largura;
+    const y = Math.random() * altura;
+
+    botaoNao.style.left = x + "px";
+    botaoNao.style.top = y + "px";
+});
+
+document.getElementById("sim").addEventListener("click", () => {
+
+    document.getElementById("inicio").style.display = "none";
+
+    document.body.style.backgroundImage =
+    "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQocWxCs5RgC0t-8ny3tJLgkWbRIthmiadGPA&s')";
+
+    document.getElementById("agradecimento").style.display = "flex";
+});
+
+</script>
+
+</body>
+</html>
+```
